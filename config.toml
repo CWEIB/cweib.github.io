@@ -1,4 +1,4 @@
-baseurl = "https://CWEIB.github.io"
+baseurl = "https://cweib.github.io"
 title = "CWEIB Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
