@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on CWEIB Blog</title>
+    <link>https://cweib.github.io/tags/blog/</link>
+    <description>Recent content in Blog on CWEIB Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cweib.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客搭建记录</title>
+      <link>https://cweib.github.io/post/2022.11.26-readme/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/2022.11.26-readme/</guid>
+      <description>博客搭建过程记录</description>
+    </item>
+    
+  </channel>
+</rss>

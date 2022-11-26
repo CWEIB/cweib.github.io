@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>建模 on CWEIB Blog</title>
+    <link>https://cweib.github.io/tags/%E5%BB%BA%E6%A8%A1/</link>
+    <description>Recent content in 建模 on CWEIB Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cweib.github.io/tags/%E5%BB%BA%E6%A8%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我与我的ROS小车-从硬件-建模-软件</title>
+      <link>https://cweib.github.io/post/2022.11.26-ros%E5%B0%8F%E8%BD%A6%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/2022.11.26-ros%E5%B0%8F%E8%BD%A6%E8%AE%B0%E5%BD%95/</guid>
+      <description>ROS小车从硬件-建模-软件项目记录</description>
+    </item>
+    
+  </channel>
+</rss>

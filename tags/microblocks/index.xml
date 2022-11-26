@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MicroBlocks on CWEIB Blog</title>
+    <link>https://cweib.github.io/tags/microblocks/</link>
+    <description>Recent content in MicroBlocks on CWEIB Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cweib.github.io/tags/microblocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MicroBlocks-关于BLE固件编译与调试</title>
+      <link>https://cweib.github.io/post/2022.11.26-microblocks-ble%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/2022.11.26-microblocks-ble%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</guid>
+      <description>MicroBlocks-关于BLE固件编译与调试</description>
+    </item>
+    
+    <item>
+      <title>MicroBlocks-固件烧录</title>
+      <link>https://cweib.github.io/post/microblocks-%E5%9B%BA%E4%BB%B6%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/microblocks-%E5%9B%BA%E4%BB%B6%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>MicroBlocks-固件烧录的三种方式 适用各种ESP系列的烧录</description>
+    </item>
+    
+    <item>
+      <title>MicroBlocks-多个BIN文件合并成一个BIN固件</title>
+      <link>https://cweib.github.io/post/microblocks-%E5%A4%9A%E4%B8%AAbin%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6%E6%88%90%E4%B8%80%E4%B8%AAbin%E5%9B%BA%E4%BB%B6/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/microblocks-%E5%A4%9A%E4%B8%AAbin%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6%E6%88%90%E4%B8%80%E4%B8%AAbin%E5%9B%BA%E4%BB%B6/</guid>
+      <description>MicroBlocks-将生成的多个BIN文件合并成一个BIN文件 适用各种ESP系列生成出来的BIN文件合并成一个BIN文件</description>
+    </item>
+    
+  </channel>
+</rss>

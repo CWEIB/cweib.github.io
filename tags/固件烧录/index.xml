@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>固件烧录 on CWEIB Blog</title>
+    <link>https://cweib.github.io/tags/%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95/</link>
+    <description>Recent content in 固件烧录 on CWEIB Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cweib.github.io/tags/%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MicroBlocks-关于BLE固件编译与调试</title>
+      <link>https://cweib.github.io/post/2022.11.26-microblocks-ble%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cweib.github.io/post/2022.11.26-microblocks-ble%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</guid>
+      <description>MicroBlocks-关于BLE固件编译与调试</description>
+    </item>
+    
+  </channel>
+</rss>
