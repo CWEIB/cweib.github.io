@@ -152,7 +152,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('https://img.zhaohuabing.com/post-bg-2015.jpg')
+        background-image: url('https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/MicroBlocks%20%E5%AE%98%E7%BD%91%E5%9B%BE%E7%89%87.png?x-oss-process=image/blur,r_4,s_3/bright,-50')
     }
 </style>
 
@@ -217,6 +217,60 @@
 
                 
                 <h1 id="microblocks-关于ble固件编译与调试">MicroBlocks-关于BLE固件编译与调试</h1>
+<p>周六的时候，种瓜让我帮忙测试了MicroBlocks官方的VM中自带的ESP32-BLE的固件编译与测试，我们可以在官方的仓库中的platformio.ini文件中可以看到，MicroBlocks官方是带有<a href="https://bitbucket.org/john_maloney/smallvm/src/3dd41fbcd3432ce01e680af49f8624a38cf1eccc/platformio.ini#lines-126">ESP32-BLE</a>的支持的，有了官方对指定的ESP-BLE固件的支持后，我们只需要通过命令（前提是搭建VSCode+PlatformIO环境）：</p>
+<blockquote>
+<p>pio run -e esp32-ble</p>
+</blockquote>
+<p>对指定的固件进行编译就能生成出bin文件，编译完成后只需要点击上传到ESP32开发板中即可完成烧录（这里只讲述在VSCode+PlatformIO环境下的烧录方式，其他烧录方法和固件合并可以看我另外的博文），烧录完成后会自动对开发板进行复位，复位完成后开发板会进入初始化过程（过程大概10秒左右，基本可以忽略）,在串口助手下可以看到具体信息：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%9B%BE.png" alt="image">
+
+
+初始化完成后即可通过MicroBlocks平台对开发板进行串口的连接，这里我们如果想在MicroBlocks中去使用BLE UART server库的话，需要打开<a href="blocks.aimaker.space">硬件编程平台</a>，打开积木库中 Network-&gt;BLE UART server即可使用BLE的功能：</p>
+<p>
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/BLE%20UART%20server%E5%9B%BE%E7%89%87.png" alt="image">
+
+</p>
+<p>接下来就是愉快的将BLE功能耍起来拉，打开<code>BLE UART server</code>积木库后可以看到有<code>start BLE USRT server MicroBlocks BLE UART server</code> 这个积木块的功能是使ESP32广播出名称为 <code>MicroBlocks BLE UART server</code>的蓝牙热点（此积木也有提示是否有设备连接）</p>
+<p>广播并等待连接的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E5%B9%BF%E6%92%AD%E8%93%9D%E7%89%99%E7%AD%89%E5%BE%85%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%95%8C%E9%9D%A2.png" alt="蓝牙广播并等待连接的界面">
+
+
+广播并已连接的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E5%B9%BF%E6%92%AD%E8%93%9D%E7%89%99%E5%B7%B2%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%95%8C%E9%9D%A2.png" alt="蓝牙广播并已连接的界面">
+
+</p>
+<p><code>BLE Device connected</code>积木块为显示广播出来的蓝牙热点是否已被了解（点击积木块会显示一个开关的UI，开和关的图表对于以连接和未连接两种姿态）</p>
+<p>未连接的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/BLE%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E7%A7%AF%E6%9C%A8%E5%9D%97-%E6%9C%AA%E8%BF%9E%E6%8E%A5.png" alt="BLE连接状态积木块-未连接">
+
+
+已连接的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/BLE%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E7%A7%AF%E6%9C%A8%E5%9D%97.png" alt="BLE连接状态积木块-已连接">
+
+</p>
+<p><code>last BLE UART message</code>积木块是获取设备ESP32写入的最后一次消息信息（这里需要注意，读取完成后将清除等待下次消息的写入）</p>
+<p>未读取到消息的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E8%AF%BB%E5%8F%96%E8%AE%BE%E5%A4%87%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E5%90%91ESP32%E5%86%99%E5%85%A5%E7%9A%84%E4%BF%A1%E6%81%AF-%E6%9C%AA%E6%9C%89%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2.png" alt="读取设备最后一次向ESP32写入的信息-未有信息界面">
+
+
+读取到消息的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E8%AF%BB%E5%8F%96%E8%AE%BE%E5%A4%87%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E5%90%91ESP32%E5%86%99%E5%85%A5%E7%9A%84%E4%BF%A1%E6%81%AF-%E8%AF%BB%E5%8F%96%E5%88%B0%E4%BF%A1%E6%81%AF%E7%9A%84%E7%95%8C%E9%9D%A2.png" alt="读取设备最后一次向ESP32写入的信息-读取到信息的界面">
+
+</p>
+<p><code>BLE UART write [hello]</code>积木是ESP32通过蓝牙向所连接的设备写入消息，点击一次即可</p>
+<p>手机接收到信息的界面：
+
+  <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E6%89%8B%E6%9C%BA%E4%B8%8A%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5%E4%B8%8E%E6%B6%88%E6%81%AF%E6%8E%A5%E6%94%B6%E7%9A%84%E6%95%88%E6%9E%9C.jpg?x-oss-process=image/resize,w_500,h_500/" alt="手机上蓝牙连接与消息接收的效果">
+
+</p>
+<p>至此完成对固件的编译与<code>BLE UART server</code>积木库的所有调试</p>
 
 
                 
