@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://cweib.github.io/img/home1.jpg">
-    <meta property="twitter:image" content="https://cweib.github.io/img/home1.jpg" />
+    <meta property="og:image" content="https://cweib.github.io/https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/home.jpg?x-oss-process=image/blur,r_2,s_1/bright,-10">
+    <meta property="twitter:image" content="https://cweib.github.io/https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/home.jpg?x-oss-process=image/blur,r_2,s_1/bright,-10" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="CWEIB, , CWEIB的博客, CWEIB Blog, 博客, 个人网站, 硬件, MicroBlocks">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>MicroBlocks-关于BLE固件编译与调试 | CWEIB Blog</title>
+    <title>MicroBlocks-关于BLE固件编译与调试 | CWEIB 博客</title>
 
     <link rel="canonical" href="/post/2022.11.26-microblocks-ble%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/">
 
@@ -152,7 +152,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/MicroBlocks%20%E5%AE%98%E7%BD%91%E5%9B%BE%E7%89%87.png?x-oss-process=image/blur,r_4,s_3/bright,-50')
+        background-image: url('https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/MicroBlocks%20%E5%AE%98%E7%BD%91%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87.png?x-oss-process=image/blur,r_4,s_3/bright,-50')
     }
 </style>
 
@@ -217,7 +217,7 @@
 
                 
                 <h1 id="microblocks-关于ble固件编译与调试">MicroBlocks-关于BLE固件编译与调试</h1>
-<p>周六的时候，种瓜让我帮忙测试了MicroBlocks官方的VM中自带的ESP32-BLE的固件编译与测试，我们可以在官方的仓库中的platformio.ini文件中可以看到，MicroBlocks官方是带有<a href="https://bitbucket.org/john_maloney/smallvm/src/3dd41fbcd3432ce01e680af49f8624a38cf1eccc/platformio.ini#lines-126">ESP32-BLE</a>的支持的，有了官方对指定的ESP-BLE固件的支持后，我们只需要通过命令（前提是搭建VSCode+PlatformIO环境）：</p>
+<p>周六的时候，<a href="https://wwj718.github.io/">种瓜</a>让我帮忙测试了MicroBlocks官方的VM中自带的ESP32-BLE的固件编译与测试，我们可以在官方的仓库中的platformio.ini文件中可以看到，MicroBlocks官方是带有<a href="https://bitbucket.org/john_maloney/smallvm/src/3dd41fbcd3432ce01e680af49f8624a38cf1eccc/platformio.ini#lines-126">ESP32-BLE</a>的支持的，有了官方对指定的ESP-BLE固件的支持后，我们只需要通过命令（前提是搭建VSCode+PlatformIO环境）：</p>
 <blockquote>
 <p>pio run -e esp32-ble</p>
 </blockquote>
@@ -226,7 +226,7 @@
   <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%9B%BE.png" alt="image">
 
 
-初始化完成后即可通过MicroBlocks平台对开发板进行串口的连接，这里我们如果想在MicroBlocks中去使用BLE UART server库的话，需要打开<a href="blocks.aimaker.space">硬件编程平台</a>，打开积木库中 Network-&gt;BLE UART server即可使用BLE的功能：</p>
+初始化完成后即可通过MicroBlocks平台对开发板进行串口的连接，这里我们如果想在MicroBlocks中去使用BLE UART server库的话，需要打开<a href="https://blocks.aimaker.space">硬件编程平台</a>，打开积木库中 Network-&gt;BLE UART server即可使用BLE的功能：</p>
 <p>
   <img src="https://cweib-blogimg.oss-cn-hangzhou.aliyuncs.com/BLE%20UART%20server%E5%9B%BE%E7%89%87.png" alt="image">
 
